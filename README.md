@@ -1,20 +1,24 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+Java Common
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+# Include
+Swagger
+DataSource
+EventType
+Utils
+Linq
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+# properties config key
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+## Swagger配置
+swagger.enabled=true
+swagger.title=Catalog Api
+server.port=8080
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+
+## 线程池配置(核心线程数,最大线程数,队列大小,线程最大空闲时间,指定用于新创建的线程名称的前缀)
+aub.executor.corePoolSize=10
+aub.executor.maxPoolSize=20
+aub.executor.queueCapacity=1000
+aub.executor.keepAliveSeconds=300
+aub.executor.threadNamePrefix=aub-executor-
