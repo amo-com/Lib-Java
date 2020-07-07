@@ -24,8 +24,13 @@ hs_err_pid*
 
 target/
 
+.setting
+.git
 .idea
 .idea/*.xml
 *.iml
 
 *.pdf
+
+# common package
+!common
