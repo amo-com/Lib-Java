@@ -28,8 +28,8 @@ public class SwaggerConfig {
     @Value("${swagger.title}")
     private String swaggerTitle;
 
-    @Value("${server.port}")
-    private String SERVER_PORT;
+    @Value("${swagger.host}")
+    private String SERVER_HOST;
 
     public List<Parameter> parameters = getDefaultParameters();
 
@@ -39,7 +39,7 @@ public class SwaggerConfig {
      */
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .host("127.0.0.1:"+this.SERVER_PORT)
+                .host(this.SERVER_HOST)
                 .globalOperationParameters(parameters)
                 .apiInfo(apiInfo())
                 .select()
@@ -52,7 +52,7 @@ public class SwaggerConfig {
         return new ApiInfoBuilder()
                 .title(this.swaggerTitle)
                 .description(this.swaggerTitle)
-                .termsOfServiceUrl("127.0.0.1:"+this.SERVER_PORT)
+                .termsOfServiceUrl("Terms Of ServiceUrl")
                 .version("1.0")
                 .build();
     }
